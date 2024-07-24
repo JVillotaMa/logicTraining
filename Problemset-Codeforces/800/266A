@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,cont=0;
+    string rgb;
+    cin >> n >> rgb;
+    if(n==1){
+        cout << 0;
+        return 0;
+    }
+    for(int i=1;i<n;i++){
+        if(rgb[i-1]==rgb[i]){
+            cont++;
+        }
+    }
+    cout << cont;
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n,k,nota,cont,result=0;
+    cin >> n >> k;
+    for (int i=1;i<=n;i++){
+        cin >> nota;
+        if(nota>0){
+            if(i<k) {result++;}
+            if(i==k){cont=nota;}
+            if(i>=k){
+                if(nota>=cont){
+                    result++;
+                }
+            }
+        }
+    }
+    cout << result;
+
+    return 0;
+}

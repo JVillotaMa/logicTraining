@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    unsigned long n;
+    string s;
+    int cont=0;
+    cin >> n >> s;
+    for (unsigned long i=0;i<s.length();i++){
+        if(s[i]=='A'){
+            cont++;
+        }else cont--;
+    }
+    if(cont > 0){
+        cout << "Anton";
+    }else if (cont == 0){
+        cout << "Friendship";
+    }else cout << "Danik";
+
+    return 0;
+}

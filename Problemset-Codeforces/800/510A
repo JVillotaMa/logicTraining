@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    unsigned short n,m,flag=0;
+    cin >> n >> m;
+    for(int i=0;i<n;i++){
+        if(i%2==0){
+            cout << string(m,'#');
+        }else{
+            if(flag==0){
+                cout << string(m-1,'.') << '#';
+                flag=1;
+            }else{
+                cout  << '#' << string(m-1,'.');
+                flag=0;
+            }
+            
+        }
+        cout << '\n';
+    }
+    return 0;
+}

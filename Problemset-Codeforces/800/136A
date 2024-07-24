@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    unsigned short n,c;
+
+    cin >> n;
+    unsigned short f[n];
+    for(unsigned short i=1;i<=n;i++){
+        cin >> c;
+        f[c-1]=i;
+    }
+    for(unsigned short i=0;i<n;i++){
+        cout << f[i] << " ";
+    }
+    return 0;
+}

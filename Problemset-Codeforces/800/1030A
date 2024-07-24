@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    unsigned short n,r;
+    cin >> n;
+    for(unsigned short i=0;i<n;i++){
+        cin >> r;
+        if(r==1){
+            cout << "HARD";
+        }
+    }
+    cout << "EASY";
+    
+    return 0;
+}

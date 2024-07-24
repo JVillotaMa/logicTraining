@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    unsigned long n;
+    unsigned long cont=0;
+    string newP,group;
+    cin >> n;
+    for(unsigned long i=0;i<n;i++){
+        cin >> newP;
+        if(newP!=group){
+            cont++;
+            group=newP;
+        }
+    }
+    cout << cont;
+    return 0;
+}

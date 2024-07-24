@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    unsigned int cont=0;
+    unsigned long n;
+    cin >> n;
+    while(n!=0){
+        if(n>=100){
+            cont++;
+            n-=100;
+        }
+        else if(n>=20){
+            cont++;
+            n-=20;
+        }else if(n>=10){
+            cont++;
+            n-=10;
+        }else if(n>=5){
+            cont++;
+            n-=5;
+        }else{
+            cont+=n;
+            n=0;
+        }
+    }
+    cout << cont;
+    return 0;
+}

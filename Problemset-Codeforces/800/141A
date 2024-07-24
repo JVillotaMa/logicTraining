@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    unsigned short letters[26];
+    string s;
+    for (int i = 0; i < 26; i++)
+    {
+        letters[i]=0;
+    }
+    cin >> s;
+    for(int i=0;i<s.length();i++){
+        letters[s[i]-65]=letters[s[i]-65]+1;
+    }
+    cin >> s;
+    for(int i=0;i<s.length();i++){
+        letters[s[i]-65]=letters[s[i]-65]+1;
+    }
+    cin >> s;
+    for(int i=0;i<s.length();i++){
+        letters[s[i]-65]=letters[s[i]-65]-1;
+    }
+    for (int i = 0; i < 26; i++)
+    {
+       if(letters[i]!=0){
+        cout << "NO";
+        return 0;
+       }
+    }
+    cout << "YES";
+    return 0;
+}

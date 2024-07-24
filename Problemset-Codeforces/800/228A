@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int contained(unsigned long s[4],unsigned long s1){
+    int cont=0;
+    for(int i = 0; i<4; i++){
+        if(s[i]==s1){
+            return 1;
+        }
+    }
+    return 0;
+}
+int main(){
+    unsigned long s[4];
+    unsigned long s1;
+    short result=0;
+    for(int i = 0; i<4; i++){
+        cin >> s1;
+        if(!contained(s,s1)){
+            result++;
+            s[i]=s1;
+        }
+    }
+    cout << 4-result;
+    return 0;
+}

@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    unsigned short n,p,q,cont=0;
+    string s;
+    cin >> n;
+    char md [26];
+    cin >> s;
+    if(n<26){
+        cout << "NO";
+        return 0;
+    }else{
+        for(int i=0; i<26;i++){
+            md[i]='0';
+        }
+        for(int i =0; i<n;i++){
+            if(s[i]>=97){
+                if(md[s[i]-97]!='X'){
+                    md[s[i]-97]='X';
+                    cont++;
+                }
+            }else{
+                if(md[s[i]-65]!='X'){
+                    md[s[i]-65]='X';
+                    cont++;
+                }
+                
+            }
+        }
+    }
+    if(cont==26){
+        cout << "YES";
+    } else cout << "NO" ;
+    return 0;
+}

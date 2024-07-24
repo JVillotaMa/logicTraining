@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    unsigned short n,p,q,cont=0;
+    cin >> n;
+    for(unsigned short i=0;i<n;i++){
+        cin >> p >> q;
+        if(p<=q-2){
+            cont++;
+        }
+    }
+    cout << cont;
+    
+    return 0;
+}

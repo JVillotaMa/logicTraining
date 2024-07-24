@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    string t;
+    int z;
+    short cont;
+    cin >> z;
+    z++;
+    while(1){
+        t = to_string(z);
+        cont=0;
+        for (short i = 0; i < t.length(); i++)
+        {
+            
+            for (short j = 0; j < t.length(); j++)
+            {
+                if(t[i]==t[j]){
+                    cont++;
+                }
+            }    
+        }
+        if(cont==4){
+            cout << z;
+            return 0;
+        }else{
+            z++;
+        }
+    }
+    
+    return 0;
+}

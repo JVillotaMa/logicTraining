@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    short m,n,aux=0;
+    cin >> m >> n;
+
+    if(m==1 && n==1){
+        cout << 0;
+        return 0;
+    }
+    if(n>m){
+        aux=m;
+        m=n;
+        n=aux;
+    }
+    if(n==1){
+        aux=m/2;
+    }else{
+
+        if(n>2){
+            if(n%2==0){
+                aux=m*(n/2);
+            }else{
+                aux=m*(n/2)+m/2;
+            }
+
+        }else aux=m;
+    }
+    cout << aux;
+    return 0;
+}

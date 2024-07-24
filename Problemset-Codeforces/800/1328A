@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    unsigned int t;
+    unsigned long long a,b,cont,aux;
+    cin >> t;
+    for(unsigned int i=0; i<t;i++){
+        cin >> a >> b;
+        cont=0;
+        if(a%b!=0){
+            if(b>=a){
+                cont= b-a;
+            }else{
+                cont = b-(a%b);
+            }    
+        }
+        cout << cont << '\n';
+    }
+    return 0;
+}

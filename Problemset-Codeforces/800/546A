@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int k,n,w,cont=0;
+    cin >> k >> n >> w;
+    while(w!=0){
+        cont+=w;
+        w--;
+    }
+    cont = cont*k;
+    if(cont<n){
+        cout << 0;
+    }else  cout << cont-n;
+
+    return 0;
+}
