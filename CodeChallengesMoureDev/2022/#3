@@ -1,0 +1,21 @@
+"""/*
+ * Escribe un programa que imprima los 50 primeros números de la sucesión
+ * de Fibonacci empezando en 0.
+ * - La serie Fibonacci se compone por una sucesión de números en
+ *   la que el siguiente siempre es la suma de los dos anteriores.
+ *   0, 1, 1, 2, 3, 5, 8, 13...
+ */
+"""
+print(0)
+print(1)
+def fibonacci(iteration,first,second,limit):
+    if iteration==limit:
+        return 1
+    fibo = first+second
+    print(fibo)
+    first=second
+    second=fibo
+    fibonacci(iteration+1,first,second,limit)
+    
+
+fibonacci(1,0,1,50)
