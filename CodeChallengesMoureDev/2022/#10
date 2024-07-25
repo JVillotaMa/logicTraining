@@ -1,0 +1,50 @@
+"""/*
+ * Crea un programa que sea capaz de transformar texto natural a código
+ * morse y viceversa.
+ * - Debe detectar automáticamente de qué tipo se trata y realizar
+ *   la conversión.
+ * - En morse se soporta raya "—", punto ".", un espacio " " entre letras
+ *   o símbolos y dos espacios entre palabras "  ".
+ * - El alfabeto morse soportado será el mostrado en
+ *   https://es.wikipedia.org/wiki/Código_morse.
+ */
+"""
+# Diccionario: letra -> código Morse
+letra_a_morse = {
+    'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',   'E': '.',
+    'F': '..-.',  'G': '--.',   'H': '....',  'I': '..',    'J': '.---',
+    'K': '-.-',   'L': '.-..',  'M': '--',    'N': '-.',    'O': '---',
+    'P': '.--.',  'Q': '--.-',  'R': '.-.',   'S': '...',   'T': '-',
+    'U': '..-',   'V': '...-',  'W': '.--',   'X': '-..-',  'Y': '-.--',
+    'Z': '--..',  '1': '.----', '2': '..---', '3': '...--', '4': '....-',
+    '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.',
+    '0': '-----', ' ': ' ',   
+}
+
+# Diccionario: código Morse -> letra
+morse_a_letra = {value: key for key, value in letra_a_morse.items()}
+
+stringToConvert="Crea un programa que sea capaz de transformar texto natural a codigo"
+string_converted = ""
+
+if(stringToConvert[0].isalpha()):
+    for let in stringToConvert:
+        print(let)
+        string_converted+=letra_a_morse.get(let.upper())+" "
+else:
+    wordMan=""
+    for i in range(0,len(stringToConvert)):
+        let=stringToConvert[i]
+        if(let==" "):
+            if(let==" " and stringToConvert[i-1]==" "):
+                string_converted+=" "
+            else:
+                print(wordMan)
+                string_converted+=morse_a_letra.get(wordMan)
+                wordMan=""
+        else:
+            wordMan+=let
+    string_converted+=morse_a_letra.get(wordMan)
+
+    
+print(string_converted)
