@@ -1,0 +1,19 @@
+"""*
+ * Crea un programa se encargue de transformar un número
+ * decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente.
+ */
+"""
+import math
+
+num = 64
+exp = math.floor(math.log(num,2))
+binary=""
+while exp>=0:
+    if num>=(2**exp):
+        num-=(2**exp)
+        binary+="1"
+    else:
+        binary+="0"
+    exp-=1   
+
+print(binary)
